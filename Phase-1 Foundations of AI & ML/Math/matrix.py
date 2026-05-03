@@ -6,6 +6,33 @@ import numpy as np
 # Each row = one movie
 # Each column = one feature: [rating, runtime, reviews]
 
+"""
+MATRICES
+========
+A matrix is a grid of numbers — rows and columns. In ML your entire
+dataset is a matrix. Each row is one sample. Each column is one feature.
+A neural network weight layer is also a matrix.
+
+Why it matters:
+Instead of processing one sample at a time, a matrix lets you process
+your entire dataset in one operation. Matrix multiplication is the core
+computation of a neural network forward pass — every layer transforms
+its input by multiplying it through a weight matrix. Understanding matrix
+shapes and multiplication is the difference between debugging PyTorch
+errors in seconds versus hours.
+
+What this file covers:
+- building a dataset matrix with NumPy
+- accessing rows (samples) and columns (features)
+- normalising an entire dataset in one line
+- matrix multiplication with @ — running many dot products at once
+- the shape rule — why inner dimensions must match, the most common
+  error in deep learning
+
+Pipeline position:
+  raw data -> normalise matrix -> [this file: matrix multiply through layers] -> output
+"""
+
 movies = np.array([
     [2.4, 120, 500],
     [3.2, 150, 600],

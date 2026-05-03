@@ -8,6 +8,30 @@ Concepts covered:
   4. Dot product - similarity between vectors
 """
 
+"""
+VECTORS
+=======
+A vector is an ordered list of numbers that represents one thing in ML.
+Every piece of data you feed into a model becomes a vector first — a user,
+a movie, a word, an image patch. Each number in the vector is one feature.
+
+Why it matters:
+Models do not understand labels or context. They only see numbers. Vectors
+are the language models speak. Everything in ML starts here — you cannot
+understand matrices, dot products, attention, or neural networks without
+first understanding that data lives as vectors.
+
+What this file covers:
+- creating vectors with NumPy
+- vector magnitude (the length of a vector using Pythagoras)
+- normalisation — scaling all features to 0-1 before training so no
+  single feature dominates the model due to its raw scale
+- dot products — measuring similarity between two vectors
+
+Pipeline position:
+  raw data -> [this file: normalise] -> train model -> evaluate
+"""
+
 import numpy as np
 
 
